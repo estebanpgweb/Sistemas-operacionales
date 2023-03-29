@@ -1,2 +1,2 @@
 #!/bin/bash
-zip -9 archivos.zip priemro/*
+zip -9 archivos.zip primero/*
