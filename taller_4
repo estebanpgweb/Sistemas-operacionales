@@ -1,1 +1,105 @@
+TALLER #4
+Las funciones y servicios que proporciona el sistema operativo se dividen en dos, el kernel y de aplicación; 
+
+Kernel: Estas funciones son esenciales para el funcionamiento del sistema operativo y se ejecutan como un super usuario estas funciones incluyen la gestión de memoria, la planificación y administración de procesos, la gestión de archivos y dispositivos, la comunicación con el hardware y la seguridad del sistema
+
+Servicios del sistema operativo: son aquellos programas proporcionan una interfaz para el usuario o para otros programas acceder a las funciones del sistema operativo, estos servicios incluyen aplicaciones como los editores de texto, los navegadores web, los reproductores de multimedia, servicios de red, como los servidores web, de correo electrónico y de archivos, herramientas de administración del sistema operativo, como los paneles de control y las herramientas de configuración.
+
+algunos de los servicios enfocados en la comodidad del usuario son:
+copia de seguridad y restauración del sistema 
+interfaz gráfica de usuario 
+administrador de archivos 
+administrador de tareas 
+accesibilidad (enfocado para usuarios con discapacidades)
+para el caso de un sistema operativo linux mediante el comando top podemos observar los recursos que consumen cada uno de los procesos del equipo 
+
+algunas actividades de un SO enfocadas en la administración de archivos son:
+navegación: podemos navegar entre diferentes archivos y carpetas  
+gestión de archivos y carpetas: 
+copiar
+mover
+borrar  
+descargar 
+renombrar
+control: gestiona los permisos de acceso a ciertos archivos
+compresión de archivos: el OS puede comprimir archivos para optimizar el espacio en almacenamiento 
+Ventajas de usar la misma interfaz de llamadas al sistema para la manipulación de archivos y dispositivos:
+
+Al utilizar la misma interfaz de llamadas al sistema, se logra una mayor uniformidad en el manejo de archivos y dispositivos, lo que hace que el código sea más fácil de entender y mantener.
+
+Al no tener que aprender dos conjuntos de llamadas al sistema diferentes, los desarrolladores pueden ahorrar tiempo y recursos.
+
+si podemos  tratar archivos y dispositivos de la misma manera, se pueden crear programas más flexibles que se adapten mejor a diferentes situaciones.
+
+Desventajas de usar la misma interfaz de llamadas al sistema para la manipulación de archivos y dispositivos:
+
+A veces, el uso de la misma interfaz de llamadas al sistema puede hacer que el código sea más complejo, especialmente si hay muchas excepciones y casos especiales.
+
+Si hay un error en el código que afecta tanto a archivos como a dispositivos, puede ser difícil determinar el origen del problema.
+
+En algunos casos, puede ser más eficiente utilizar llamadas al sistema específicas para dispositivos o archivos, en lugar de utilizar una única interfaz para ambos.
+
+
+responda las siguientes preguntas:
+¿Cuál es el propósito del intérprete de comandos?
+el intérprete de comando funciona como un traductor entre el usuario y la máquina, este se encarga de recibir los comando escritos por el usuario y convertirlo en instrucciones para el sistema operativo 
+¿porque está separado del kernel? 
+Esto se da porque el intérprete de comandos está sujeto a cambios, además cada uno tiene una función específica y son independientes entre sí permitiéndonos trabajar diferentes intérpretes con el mismo kernel, otra de las razones es porque el kernel es una parte fundamental del sistema operativo y debe estar protegido de errores por la tanto si está unido al kernel esta sería un vulnerabilidad muy grande y afectaría directamente el funcionamiento de este
+
+Liste los requisitos para desarrollar un intérprete de comandos
+Conocimientos de programación: Los lenguajes de programación comúnmente utilizados para implementar intérpretes de comandos son C, Python, Perl y Java.
+Conocimientos del sistema operativo: Es importante conocer cómo funciona el sistema operativo y cómo interactúa con el intérprete de comandos. Esto incluye conocer los comandos básicos del sistema operativo y cómo se comunican con el kernel.
+Análisis sintáctico y semántico: El intérprete de comandos debe ser capaz de analizar la sintaxis de los comandos ingresados por el usuario y verificar que son válidos semánticamente.
+Manejo de errores: El intérprete de comandos debe ser capaz de manejar errores de sintaxis, semántica y otros errores que puedan ocurrir durante la ejecución de los comandos.
+Implementación de los comandos: Es necesario implementar los comandos que el intérprete de comandos soportará. Esto puede implicar la interacción con el sistema operativo y sus recursos, como archivos, directorios, procesos, etc.
+Pruebas y depuración: Es importante realizar pruebas exhaustivas del intérprete de comandos y depurar cualquier error que pueda surgir durante la implementación. Esto puede implicar el uso de herramientas de depuración y pruebas automatizadas.
+
+ Compare las ventajas y desventajas de los modelos de intercomunicación. 
+
+Existen diferentes modelos de intercomunicación utilizados en la comunicación interpersonal y organizacional, algunas ventajas y desventajas de los modelos más comunes son:
+Modelo lineal:
+Ventajas: Es sencillo y fácil de entender, por lo que es adecuado para la comunicación en situaciones cotidianas. También es útil para comunicaciones en un solo sentido, como la publicidad.
+Desventajas: No considera la retroalimentación, lo que puede llevar a malentendidos y errores en la comunicación.
+
+Modelo interactivo:
+Ventajas: Considera la retroalimentación y permite a los participantes en la comunicación ajustar su mensaje en función de la respuesta del receptor. También tiene en cuenta el contexto y el ruido en la comunicación.
+Desventajas: No toma en cuenta la complejidad de la comunicación interpersonal y puede ser insuficiente para la comunicación en situaciones más complejas, como negociaciones y resolución de conflictos.
+
+Conteste las siguientes preguntas: 
+ Cual es la principal ventaja de usar microkernel en el diseño del OS? 
+La principal ventaja de usar un microkernel en el diseño de un sistema operativo es la modularidad y la flexibilidad que proporciona al sistema, lo que permite una mayor escalabilidad, seguridad y estabilidad, así como la implementación de sistemas operativos distribuidos.
+
+ ¿Cómo  interactúan los programas de usuario y los servicios del OS en una arquitectura basada en microkernel? 
+en una arquitectura basada en microkernel, los programas de usuario interactúan con los servicios del sistema operativo a través de llamadas a procedimientos remotos o intercambio de mensajes, mientras que el microkernel proporciona la infraestructura necesaria para la comunicación y coordinación entre los diferentes servicios del sistema operativo y los programas de usuario.
+
+ ¿Cuáles son las desventajas de usar la arquitectura de microkernel?
+
+Rendimiento: debido a que los servicios del sistema operativo se ejecutan en espacio de usuario, pueden ser menos eficientes en términos de rendimiento que los servicios implementados directamente en el kernel.
+
+Complejidad: la arquitectura de microkernel puede aumentar la complejidad del sistema, ya que es necesario implementar una infraestructura adicional para la comunicación entre los diferentes servicios del sistema operativo y el microkernel. 
+
+Seguridad: aunque el microkernel puede proporcionar una mayor seguridad al sistema operativo, la necesidad de comunicación entre diferentes servicios a través del microkernel puede también aumentar la superficie de ataque del sistema, lo que puede aumentar la probabilidad de vulnerabilidades.
+
+Sobrecarga de comunicación: especialmente en sistemas con muchos servicios y una alta carga de trabajo, esto puede limitar el rendimiento y la escalabilidad del sistema.
+Compare las ventajas y desventajas de usar VM
+Ventajas de usar VM:
+
+Aislamiento: si una VM se ve comprometida o falla, no afectará a otras VM o al sistema host.
+
+Flexibilidad: las VM permiten ejecutar diferentes sistemas operativos y aplicaciones en la misma máquina física, lo que proporciona una mayor flexibilidad para la gestión de recursos y la compatibilidad de software.
+
+Portabilidad: las VM son altamente portátiles y pueden moverse fácilmente entre diferentes máquinas físicas. 
+
+Desventajas de usar VM:
+Sobrecarga: las VM pueden generar una sobrecarga adicional en la máquina física debido a la necesidad de virtualización y aislamiento de los recursos del sistema
+
+Costo: la implementación de VM puede ser costosa debido a la necesidad de hardware adicional, licencias de software y personal de soporte técnico para mantener y administrar el entorno virtual.
+
+Rendimiento: las VM pueden ser menos eficientes en términos de rendimiento que las aplicaciones que se ejecutan directamente en la máquina física.
+
+
+
+
+
+
 
